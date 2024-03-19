@@ -49,22 +49,22 @@ const students = [
 
 ]
 const allGrades70 = []
-const sumnIdAndGrades = []
+const sumnIdsAndGrades = []
 
 
 
 for(let i = 0; i < students.length; i++){
-    let  singleStudents = students[i]
-    let singleGradesStudents = singleStudents.grades;
-    let  singleId = singleStudents.id;
-    let singleName = singleStudents.toUpperCase()
+    let  singleStudent = students[i]
+     let singleGradeStudent = singleStudent.grades;
+     let  singleId = singleStudent.id;
+    singleStudent.name = students[i].name.toUpperCase();
     
-    if(singleId > 120 && singleGradesStudents > 70){
-        sumnIdAndGrades.push(singleStudents);
+    if(singleId > 120 && singleGradeStudent > 70){
+        sumnIdsAndGrades.push(singleStudent);
     }
-    if(singleGradesStudents > 70){
-        allGrades70.push(singleStudents);
+    if(singleGradeStudent > 70){
+        allGrades70.push(singleStudent);
     }
     
 }
-console.log(  students, allGrades70, sumnIdAndGrades)
+console.log(students, allGrades70, sumnIdsAndGrades)
